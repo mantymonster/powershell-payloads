@@ -1,4 +1,16 @@
+.NOTES
+	This script will convert an approximation of what your image should look like. Most likely you'll need to test several images to find one that works 
+	well. It is best to use images no larger than 150x150 pixels, but I would even recommend going smaller than that. My example image is 25x20 pixels
+	To increase the size of the pixels add more spaces to the following Write-Host command.
+	Write-Host " " -NoNewline -BackgroundColor $BackGround 
 
+.DESCRIPTION 
+	This program will take the path of an image you provide and convert it to a Bitmap file. An algorithm will be used to calculate the closest console color
+	that can be used in powershell. Finally that image will be drawn in a powershell window. 
+
+.SYNTAX 
+	"$env:TMP\testimage2.bmp" | PS-Draw
+	PS-Draw -Path "$env:TMP\testimage2.bmp"
 
 Function PS-Draw
 {
